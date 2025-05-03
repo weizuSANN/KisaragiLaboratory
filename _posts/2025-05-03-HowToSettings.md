@@ -24,7 +24,7 @@ comments: true
 ## コメント機能の実装
 本ブログにおいて、コメント機能は、[disqus](https://disqus.com/admin/install/platforms/jekyll/)というプロバイダを利用しています。先のリンクから飛んで、アカウントを作成します。その後、Settings→Generalの順にアクセスし、Shortnameの欄をコピーします。<br>
 _config.ymlを開きます。commentsでproviderをdisqusにし、disqusのshortnameに、先ほどコピーしたShortnameを貼り付けます。<br>
-![disqus_config](/assets/Picture/HowToSetting/Config.png)<br>
+![disqus_config]({{site.baseurl}}/assets/Picture/HowToSetting/Config.png)<br>
 ブログ本体の.mdファイルの一番上の設定に、comments:trueをつけ足せば、コメントができるようになります。<br>
 
 ## タグ・カテゴリー検索の実装
@@ -95,7 +95,7 @@ tag_archive:
 
 ## 検索機能の実装
 検索機能はめちゃくちゃ簡単です。<br>
-![SearchConfig](/assets/Picture/HowToSetting/SearchConfig.png)<br>
+![SearchConfig]({{site.baseurl}}/assets/Picture/HowToSetting/SearchConfig.png)<br>
 このように、search関連をtrueにして、search_providerをlunrにして終わりです。<br>
 
 ## まとめ
