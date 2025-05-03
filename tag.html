@@ -9,7 +9,10 @@ permalink: /tags/
     <ul style="text-align: center;">
         {% for post in tag[1] %}
         <li style="list-style: none;"><h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1></li>
-        {{post.excerpt}}
+        {% assign paragraphs = post.content | split: "</p>" %}
+        {% if paragraphs.size > 1 %}
+        <p>{{ paragraphs[1] | remove: "<p>" | strip_html | truncate: 100 }}</p>
+        {% endif %}
         {% endfor %}
     </ul>
 </article>
