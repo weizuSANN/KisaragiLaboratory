@@ -6,7 +6,7 @@ permalink: /tags/
 {% for tag in site.tags %}
 <article>
     <h1 id="tag.{{ tag[0] }}" style="margin-left: 30%; text-align: left;">{{ tag[0] }}</h1>
-    <ul style="margin-left: 30%; text-align: left;">
+    <ul style="margin-left: 30%; margin-right: 20%; text-align: left;">
         {% for post in tag[1] %}
         <li style="list-style: none;"><h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1></li>
         {% assign paragraphs = post.content | split: "</h2>" %}
