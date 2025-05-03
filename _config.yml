@@ -113,7 +113,7 @@ analytics:
 # Site Author
 author:
   name             : "Kaede Kisaragi"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "{{ site.baseurl }}/assets/Picture/Default/Icon1.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "とある工学派の日記帳"
   location         : "Tokyo Metropolitan Industrial Technology College"
   email            : 
