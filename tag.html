@@ -9,7 +9,7 @@ permalink: /tags/
     <ul style="text-align: center;">
         {% for post in tag[1] %}
         <li style="list-style: none;"><h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1></li>
-        {{post.content[1]}}
+        {{post.excerpt}}
         {% endfor %}
     </ul>
 </article>
