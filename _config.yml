@@ -15,7 +15,7 @@
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
+locale                   : "ja-JP"
 title                    : "きさらぎ研究室"
 title_separator          : "-"
 subtitle                 : "別名きさらぎ工房"
@@ -249,7 +249,7 @@ pagination:
   sort_reverse: true
   category: 'posts'
   tag: ''
-  locale: ''
+  locale: 'ja-JP'
   trail:
     before: 2
     after: 2
@@ -283,10 +283,10 @@ whitelist:
 #  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path>/my-awesome-category/index.html ~> path: /
 category_archive:
-  type: liquid
+  type: jekyll-archives
   path: /categories/
 tag_archive:
-  type: liquid
+  type: jekyll-archives
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
 # jekyll-archives:
@@ -319,6 +319,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
