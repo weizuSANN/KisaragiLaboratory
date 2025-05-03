@@ -1,7 +1,7 @@
 ---
 title: "ブログ開設" #タイトルを入力
 categories: #分類
-  - その他
+  - Other
 tags: #タグ
   - blog
 ---
