@@ -6,10 +6,14 @@ permalink: /categories/
 {% for category in site.categories %}
 <article>
     {% capture category_name %}{{ category | first}}{% endcapture %}
-    <h1 id="tag.{{ category_name }}">{{ category_name }}</h1>
-    <ul>
+    <h1 id="tag.{{ category_name }}" style="margin-left: 30%; text-align: left;">{{ category_name }}</h1>
+    <ul style="margin-left: 30%; margin-right: 20%; text-align: left;">
         {% for post in site.categories[category_name] %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        <li style="list-style: none;"><h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1></li>
+        {% assign paragraphs = post.content | split: "</h2>" %}
+        {% if paragraphs.size > 2 %}
+        <p>{{ paragraphs[2] | remove: "<p>" | strip_html | truncate: 100 }}</p>
+        {% endif %}
         {% endfor %}
     </ul>
 </article>
