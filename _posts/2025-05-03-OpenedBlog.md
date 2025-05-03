@@ -4,6 +4,7 @@ categories: #分類
   - Other
 tags: #タグ
   - blog
+comments: true
 ---
 ## 目次
 1. [自己紹介](#目次)
