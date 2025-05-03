@@ -10,8 +10,8 @@ permalink: /tags/
         {% for post in tag[1] %}
         <li style="list-style: none;"><h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1></li>
         {% assign paragraphs = post.content | split: "</p>" %}
-        {% if paragraphs.size > 1 %}
-        <p>{{ paragraphs[1] | remove: "<p>" | strip_html | truncate: 100 }}</p>
+        {% if paragraphs.size > 0 %}
+        <p>{{ paragraphs[0] | remove: "<p>" | strip_html | truncate: 100 }}</p>
         {% endif %}
         {% endfor %}
     </ul>
