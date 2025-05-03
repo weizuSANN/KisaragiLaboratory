@@ -11,7 +11,7 @@ permalink: /tags/
         <li style="list-style: none;"><h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1></li>
         {% assign paragraphs = post.content | split: "</h2>" %}
         {% if paragraphs.size > 2 %}
-        <p>{{ paragraphs[1] | remove: "<p>" | strip_html | truncate: 100 }}</p>
+        <p>{{ paragraphs[2] | remove: "<p>" | strip_html | truncate: 100 }}</p>
         {% endif %}
         {% endfor %}
     </ul>
