@@ -3,7 +3,7 @@ title: "ブログ開設" #タイトルを入力
 categories: #分類
   - Other
 tags: #タグ
-  - blog
+  - Blog
 comments: true
 ---
 ## 目次

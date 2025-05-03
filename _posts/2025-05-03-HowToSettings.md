@@ -23,13 +23,13 @@ comments: true
 
 ## コメント機能の実装
 本ブログにおいて、コメント機能は、[disqus](https://disqus.com/admin/install/platforms/jekyll/)というプロバイダを利用しています。先のリンクから飛んで、アカウントを作成します。その後、Settings→Generalの順にアクセスし、Shortnameの欄をコピーします。<br>
-_config.ymlを開きます。commentsでproviderをdisqusにし、disqusのshortnameに、先ほどコピーしたShortnameを貼り付けます。
-![disqus_config](/assets/Picture/HowToSetting/Config.png)
-ブログ本体の.mdファイルの一番上の設定に、comments:trueをつけ足せば、コメントができるようになります。
+_config.ymlを開きます。commentsでproviderをdisqusにし、disqusのshortnameに、先ほどコピーしたShortnameを貼り付けます。<br>
+![disqus_config](/assets/Picture/HowToSetting/Config.png)<br>
+ブログ本体の.mdファイルの一番上の設定に、comments:trueをつけ足せば、コメントができるようになります。<br>
 
 ## タグ・カテゴリー検索の実装
-これが一番時間かかりました。まず、プロジェクトのルートフォルダに、tag.html,category.htmlを作成します。
-tag.htmlには、以下のコードをそのまま貼り付けます。
+これが一番時間かかりました。まず、プロジェクトのルートフォルダに、tag.html,category.htmlを作成します。<br>
+tag.htmlには、以下のコードをそのまま貼り付けます。<br>
 ```
 ---
 layout: page
@@ -51,7 +51,7 @@ permalink: /tags/
 </article>
 {% endfor %}
 ```
-理屈を軽く解説します。
+理屈を軽く解説します。<br>
 6行目で、Python式のfor文を利用してこのサイトで使用されてるタグ(site.tagが保持している)を取得して、タグをすべて表示させます。<br>
 8行目がタグ表示の仕組みです。少し大きめにh1で表記しています。また、全体から見た時、中心にあるけど、テキストそのものは左寄せにしたいので、margin-leftとtext-alignを指定しています。<br>
 9行目は、リスト要素を利用して、記事のタイトル、記事の目次を除いた最初数行を表示させます。<br>
@@ -81,7 +81,7 @@ permalink: /categories/
 </article>
 {% endfor %}
 ```
-_config.ymlを必要に応じて改変します。
+_config.ymlを必要に応じて改変します。<br>
 ```
 category_archive:
   type: liquid
@@ -90,13 +90,13 @@ tag_archive:
   type: liquid
   path: /tags/
 ```
-あとはプッシュして、記事のtagをクリックすると、tag一覧が表示されます。
-なお、post.urlだけだと、URLからリポジトリが抜けていて、アクセスできないという仕様に嵌り、何度も修正しました。上記コードはうまくいったものをそのままのっけてるので動くと思います。
+あとはプッシュして、記事のtagをクリックすると、tag一覧が表示されます。<br>
+なお、post.urlだけだと、URLからリポジトリが抜けていて、アクセスできないという仕様に嵌り、何度も修正しました。上記コードはうまくいったものをそのままのっけてるので動くと思います。<br>
 
 ## 検索機能の実装
-検索機能はめちゃくちゃ簡単です。
-![SearchConfig](/assets/Picture/HowToSetting/SearchConfig.png)
-このように、search関連をtrueにして、search_providerをlunrにして終わりです。
+検索機能はめちゃくちゃ簡単です。<br>
+![SearchConfig](/assets/Picture/HowToSetting/SearchConfig.png)<br>
+このように、search関連をtrueにして、search_providerをlunrにして終わりです。<br>
 
 ## まとめ
 知っていれば簡単なんですけど、資料が英語しかなかったり、Markdownだけかければいいかと思いきやhtmlの技術(産技2年生相当)が必要だったりするので、一応書いた感じです。もし追従してブログ書く方いたら参考程度にでも。
