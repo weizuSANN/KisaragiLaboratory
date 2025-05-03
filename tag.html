@@ -5,12 +5,12 @@ permalink: /tags/
 ---
 {% for tag in site.tags %}
 <article>
-    <h1 id="tag.{{ tag[0] }}" style="text-align: center; line-height: 200%;">{{ tag[0] }}</h1>
-    <ul style="text-align: center;">
+    <h1 id="tag.{{ tag[0] }}" style="margin: auto; text-align: left; line-height: 200%;">{{ tag[0] }}</h1>
+    <ul style="margin: auto; text-align: left;">
         {% for post in tag[1] %}
         <li style="list-style: none;"><h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1></li>
         {% assign paragraphs = post.content | split: "</p>" %}
-        {% if paragraphs.size > 0 %}
+        {% if paragraphs.size > 1 %}
         <p>{{ paragraphs[0] | remove: "<p>" | strip_html | truncate: 100 }}</p>
         {% endif %}
         {% endfor %}
