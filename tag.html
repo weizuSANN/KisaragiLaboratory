@@ -5,7 +5,7 @@ permalink: /tags/
 ---
 {% for tag in site.tags %}
 <article>
-    <h1 id="tag.{{ tag[0] }}" style="text-align: center; line-height: 300%;">{{ tag[0] }}</h1>
+    <h1 id="tag.{{ tag[0] }}" style="text-align: center; line-height: 200%;">{{ tag[0] }}</h1>
     <ul style="text-align: center;">
         {% for post in tag[1] %}
         <li style="list-style: none;"><h1><a href="{{ post.url }}">{{ post.title }}</a></h1></li>
